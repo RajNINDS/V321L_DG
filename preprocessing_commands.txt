@@ -1,0 +1,468 @@
+#################################################
+# Code Call Organization By: Kory R Johnson, Ph.D
+# Affiliation: NINDS/NIH Bioinformatics Section
+# Contact information: johnsonko@mail.nih.gov
+#################################################
+
+########################
+# concat data per sample
+########################
+
+cat RT01-VV50-DG_S1_L001_R1_001.fastq.gz RT01-VV50-DG_S1_L002_R1_001.fastq.gz RT01-VV50-DG_S1_L003_R1_001.fastq.gz RT01-VV50-DG_S1_L004_R1_001.fastq.gz > VV50_DG_R1_001.fastq.gz
+cat RT02-VV55-DG_S6_L001_R1_001.fastq.gz RT02-VV55-DG_S6_L002_R1_001.fastq.gz RT02-VV55-DG_S6_L003_R1_001.fastq.gz RT02-VV55-DG_S6_L004_R1_001.fastq.gz > VV55_DG_R1_001.fastq.gz
+cat RT03-VV58-DG_S3_L001_R1_001.fastq.gz RT03-VV58-DG_S3_L002_R1_001.fastq.gz RT03-VV58-DG_S3_L003_R1_001.fastq.gz RT03-VV58-DG_S3_L004_R1_001.fastq.gz > VV58_DG_R1_001.fastq.gz
+cat RT04-LL51-DG_S10_L001_R1_001.fastq.gz RT04-LL51-DG_S10_L002_R1_001.fastq.gz RT04-LL51-DG_S10_L003_R1_001.fastq.gz RT04-LL51-DG_S10_L004_R1_001.fastq.gz > VLL51_DG_R1_001.fastq.gz
+cat RT05-LL53-DG_S2_L001_R1_001.fastq.gz RT05-LL53-DG_S2_L002_R1_001.fastq.gz RT05-LL53-DG_S2_L003_R1_001.fastq.gz RT05-LL53-DG_S2_L004_R1_001.fastq.gz > LL53_DG_R1_001.fastq.gz
+cat RT06-LL60-DG_S4_L001_R1_001.fastq.gz RT06-LL60-DG_S4_L002_R1_001.fastq.gz RT06-LL60-DG_S4_L003_R1_001.fastq.gz RT06-LL60-DG_S4_L004_R1_001.fastq.gz > LL60_DG_R1_001.fastq.gz
+cat RT01-VV50-DG_S1_L001_R2_001.fastq.gz RT01-VV50-DG_S1_L002_R2_001.fastq.gz RT01-VV50-DG_S1_L003_R2_001.fastq.gz RT01-VV50-DG_S1_L004_R2_001.fastq.gz > VV50_DG_R2_001.fastq.gz
+cat RT02-VV55-DG_S6_L001_R2_001.fastq.gz RT02-VV55-DG_S6_L002_R2_001.fastq.gz RT02-VV55-DG_S6_L003_R2_001.fastq.gz RT02-VV55-DG_S6_L004_R2_001.fastq.gz > VV55_DG_R2_001.fastq.gz
+cat RT03-VV58-DG_S3_L001_R2_001.fastq.gz RT03-VV58-DG_S3_L002_R2_001.fastq.gz RT03-VV58-DG_S3_L003_R2_001.fastq.gz RT03-VV58-DG_S3_L004_R2_001.fastq.gz > VV58_DG_R2_001.fastq.gz
+cat RT04-LL51-DG_S10_L001_R2_001.fastq.gz RT04-LL51-DG_S10_L002_R2_001.fastq.gz RT04-LL51-DG_S10_L003_R2_001.fastq.gz RT04-LL51-DG_S10_L004_R2_001.fastq.gz > VLL51_DG_R2_001.fastq.gz
+cat RT05-LL53-DG_S2_L001_R2_001.fastq.gz RT05-LL53-DG_S2_L002_R2_001.fastq.gz RT05-LL53-DG_S2_L003_R2_001.fastq.gz RT05-LL53-DG_S2_L004_R2_001.fastq.gz > LL53_DG_R2_001.fastq.gz
+cat RT06-LL60-DG_S4_L001_R2_001.fastq.gz RT06-LL60-DG_S4_L002_R2_001.fastq.gz RT06-LL60-DG_S4_L003_R2_001.fastq.gz RT06-LL60-DG_S4_L004_R2_001.fastq.gz > LL60_DG_R2_001.fastq.gz
+cat LL014-DG_S14_L001_R1_001.fastq.gz LL014-DG_S14_L002_R1_001.fastq.gz LL014-DG_S14_L003_R1_001.fastq.gz LL014-DG_S14_L004_R1_001.fastq.gz > LL014_DG_R1_001.fastq.gz
+cat LL015-DG_S18_L001_R1_001.fastq.gz LL015-DG_S18_L002_R1_001.fastq.gz LL015-DG_S18_L003_R1_001.fastq.gz LL015-DG_S18_L004_R1_001.fastq.gz > LL015_DG_R1_001.fastq.gz
+cat LL019-DG_S12_L001_R1_001.fastq.gz LL019-DG_S12_L002_R1_001.fastq.gz LL019-DG_S12_L003_R1_001.fastq.gz LL019-DG_S12_L004_R1_001.fastq.gz > LL019_DG_R1_001.fastq.gz
+cat VV011-DG_S23_L001_R1_001.fastq.gz VV011-DG_S23_L002_R1_001.fastq.gz VV011-DG_S23_L003_R1_001.fastq.gz VV011-DG_S23_L004_R1_001.fastq.gz > VV011_DG_R1_001.fastq.gz
+cat VV012-DG_S19_L001_R1_001.fastq.gz VV012-DG_S19_L002_R1_001.fastq.gz VV012-DG_S19_L003_R1_001.fastq.gz VV012-DG_S19_L004_R1_001.fastq.gz > VV012_DG_R1_001.fastq.gz
+cat VV013-DG_S15_L001_R1_001.fastq.gz VV013-DG_S15_L002_R1_001.fastq.gz VV013-DG_S15_L003_R1_001.fastq.gz VV013-DG_S15_L004_R1_001.fastq.gz > VV013_DG_R1_001.fastq.gz
+cat LL014-DG_S14_L001_R2_001.fastq.gz LL014-DG_S14_L002_R2_001.fastq.gz LL014-DG_S14_L003_R2_001.fastq.gz LL014-DG_S14_L004_R2_001.fastq.gz > LL014_DG_R2_001.fastq.gz
+cat LL015-DG_S18_L001_R2_001.fastq.gz LL015-DG_S18_L002_R2_001.fastq.gz LL015-DG_S18_L003_R2_001.fastq.gz LL015-DG_S18_L004_R2_001.fastq.gz > LL015_DG_R2_001.fastq.gz
+cat LL019-DG_S12_L001_R2_001.fastq.gz LL019-DG_S12_L002_R2_001.fastq.gz LL019-DG_S12_L003_R2_001.fastq.gz LL019-DG_S12_L004_R2_001.fastq.gz > LL019_DG_R2_001.fastq.gz
+cat VV011-DG_S23_L001_R2_001.fastq.gz VV011-DG_S23_L002_R2_001.fastq.gz VV011-DG_S23_L003_R2_001.fastq.gz VV011-DG_S23_L004_R2_001.fastq.gz > VV011_DG_R2_001.fastq.gz
+cat VV012-DG_S19_L001_R2_001.fastq.gz VV012-DG_S19_L002_R2_001.fastq.gz VV012-DG_S19_L003_R2_001.fastq.gz VV012-DG_S19_L004_R2_001.fastq.gz > VV012_DG_R2_001.fastq.gz
+cat VV013-DG_S15_L001_R2_001.fastq.gz VV013-DG_S15_L002_R2_001.fastq.gz VV013-DG_S15_L003_R2_001.fastq.gz VV013-DG_S15_L004_R2_001.fastq.gz > VV013_DG_R2_001.fastq.gz
+
+swarm -f cat.swarm -g 10
+
+######################################
+# generate fastqc fastq_screen reports
+######################################
+
+fastqc LL014_DG_R1_001.fastq.gz ; fastq_screen LL014_DG_R1_001.fastq.gz
+fastqc LL014_DG_R2_001.fastq.gz ; fastq_screen LL014_DG_R2_001.fastq.gz
+fastqc LL015_DG_R1_001.fastq.gz ; fastq_screen LL015_DG_R1_001.fastq.gz
+fastqc LL015_DG_R2_001.fastq.gz ; fastq_screen LL015_DG_R2_001.fastq.gz
+fastqc LL019_DG_R1_001.fastq.gz ; fastq_screen LL019_DG_R1_001.fastq.gz
+fastqc LL019_DG_R2_001.fastq.gz ; fastq_screen LL019_DG_R2_001.fastq.gz
+fastqc LL53_DG_R1_001.fastq.gz ; fastq_screen LL53_DG_R1_001.fastq.gz
+fastqc LL53_DG_R2_001.fastq.gz ; fastq_screen LL53_DG_R2_001.fastq.gz
+fastqc LL60_DG_R1_001.fastq.gz ; fastq_screen LL60_DG_R1_001.fastq.gz
+fastqc LL60_DG_R2_001.fastq.gz ; fastq_screen LL60_DG_R2_001.fastq.gz
+fastqc VLL51_DG_R1_001.fastq.gz ; fastq_screen VLL51_DG_R1_001.fastq.gz
+fastqc VLL51_DG_R2_001.fastq.gz ; fastq_screen VLL51_DG_R2_001.fastq.gz
+fastqc VV011_DG_R1_001.fastq.gz ; fastq_screen VV011_DG_R1_001.fastq.gz
+fastqc VV011_DG_R2_001.fastq.gz ; fastq_screen VV011_DG_R2_001.fastq.gz
+fastqc VV012_DG_R1_001.fastq.gz ; fastq_screen VV012_DG_R1_001.fastq.gz
+fastqc VV012_DG_R2_001.fastq.gz ; fastq_screen VV012_DG_R2_001.fastq.gz
+fastqc VV013_DG_R1_001.fastq.gz ; fastq_screen VV013_DG_R1_001.fastq.gz
+fastqc VV013_DG_R2_001.fastq.gz ; fastq_screen VV013_DG_R2_001.fastq.gz
+fastqc VV50_DG_R1_001.fastq.gz ; fastq_screen VV50_DG_R1_001.fastq.gz
+fastqc VV50_DG_R2_001.fastq.gz ; fastq_screen VV50_DG_R2_001.fastq.gz 
+fastqc VV55_DG_R1_001.fastq.gz ; fastq_screen VV55_DG_R1_001.fastq.gz
+fastqc VV55_DG_R2_001.fastq.gz ; fastq_screen VV55_DG_R2_001.fastq.gz
+fastqc VV58_DG_R1_001.fastq.gz ; fastq_screen VV58_DG_R1_001.fastq.gz
+fastqc VV58_DG_R2_001.fastq.gz ; fastq_screen VV58_DG_R2_001.fastq.gz
+
+swarm -f qc.swarm -g 10 --module fastqc,fastq_screen
+
+##########################
+# generate multiqc reports
+##########################
+
+multiqc --title \'MultiQC_Results_For_DG\' /data/johnsonko/SideProject/Raj
+
+swarm -f multiqc.swarm -g 10 --module multiqc
+
+##################################
+# perform adaptor clip and qc trim
+##################################
+
+java -Djava.io.tmpdir=. -jar $TRIMMOJAR PE -phred33 -threads $SLURM_CPUS_PER_TASK \
+    LL014_DG_R1_001.fastq.gz LL014_DG_R2_001.fastq.gz \
+    LL014_DG_R1_paired.fq.gz LL014_DG_R1_unpaired.fq.gz \
+    LL014_DG_R2_paired.fq.gz LL014_DG_R2_unpaired.fq.gz \
+    HEADCROP:11 \
+    TRAILING:2 \
+    ILLUMINACLIP:/usr/local/apps/trimmomatic/Trimmomatic-0.36/adapters/TruSeq3-PE-2.fa:2:30:10 \
+    SLIDINGWINDOW:4:15 MINLEN:15
+java -Djava.io.tmpdir=. -jar $TRIMMOJAR PE -phred33 -threads $SLURM_CPUS_PER_TASK \
+    LL015_DG_R1_001.fastq.gz LL015_DG_R2_001.fastq.gz \
+    LL015_DG_R1_paired.fq.gz LL015_DG_R1_unpaired.fq.gz \
+    LL015_DG_R2_paired.fq.gz LL015_DG_R2_unpaired.fq.gz \
+    HEADCROP:11 \
+    TRAILING:2 \
+    ILLUMINACLIP:/usr/local/apps/trimmomatic/Trimmomatic-0.36/adapters/TruSeq3-PE-2.fa:2:30:10 \
+    SLIDINGWINDOW:4:15 MINLEN:15
+java -Djava.io.tmpdir=. -jar $TRIMMOJAR PE -phred33 -threads $SLURM_CPUS_PER_TASK \
+    LL019_DG_R1_001.fastq.gz LL019_DG_R2_001.fastq.gz \
+    LL019_DG_R1_paired.fq.gz LL019_DG_R1_unpaired.fq.gz \
+    LL019_DG_R2_paired.fq.gz LL019_DG_R2_unpaired.fq.gz \
+    HEADCROP:11 \
+    TRAILING:2 \
+    ILLUMINACLIP:/usr/local/apps/trimmomatic/Trimmomatic-0.36/adapters/TruSeq3-PE-2.fa:2:30:10 \
+    SLIDINGWINDOW:4:15 MINLEN:15
+java -Djava.io.tmpdir=. -jar $TRIMMOJAR PE -phred33 -threads $SLURM_CPUS_PER_TASK \
+    LL53_DG_R1_001.fastq.gz LL53_DG_R2_001.fastq.gz \
+    LL53_DG_R1_paired.fq.gz LL53_DG_R1_unpaired.fq.gz \
+    LL53_DG_R2_paired.fq.gz LL53_DG_R2_unpaired.fq.gz \
+    HEADCROP:11 \
+    TRAILING:2 \
+    ILLUMINACLIP:/usr/local/apps/trimmomatic/Trimmomatic-0.36/adapters/TruSeq3-PE-2.fa:2:30:10 \
+    SLIDINGWINDOW:4:15 MINLEN:15
+java -Djava.io.tmpdir=. -jar $TRIMMOJAR PE -phred33 -threads $SLURM_CPUS_PER_TASK \
+    LL60_DG_R1_001.fastq.gz LL60_DG_R2_001.fastq.gz \
+    LL60_DG_R1_paired.fq.gz LL60_DG_R1_unpaired.fq.gz \
+    LL60_DG_R2_paired.fq.gz LL60_DG_R2_unpaired.fq.gz \
+    HEADCROP:11 \
+    TRAILING:2 \
+    ILLUMINACLIP:/usr/local/apps/trimmomatic/Trimmomatic-0.36/adapters/TruSeq3-PE-2.fa:2:30:10 \
+    SLIDINGWINDOW:4:15 MINLEN:15
+java -Djava.io.tmpdir=. -jar $TRIMMOJAR PE -phred33 -threads $SLURM_CPUS_PER_TASK \
+    VLL51_DG_R1_001.fastq.gz VLL51_DG_R2_001.fastq.gz \
+    VLL51_DG_R1_paired.fq.gz VLL51_DG_R1_unpaired.fq.gz \
+    VLL51_DG_R2_paired.fq.gz VLL51_DG_R2_unpaired.fq.gz \
+    HEADCROP:11 \
+    TRAILING:2 \
+    ILLUMINACLIP:/usr/local/apps/trimmomatic/Trimmomatic-0.36/adapters/TruSeq3-PE-2.fa:2:30:10 \
+    SLIDINGWINDOW:4:15 MINLEN:15
+java -Djava.io.tmpdir=. -jar $TRIMMOJAR PE -phred33 -threads $SLURM_CPUS_PER_TASK \
+    VV011_DG_R1_001.fastq.gz VV011_DG_R2_001.fastq.gz \
+    VV011_DG_R1_paired.fq.gz VV011_DG_R1_unpaired.fq.gz \
+    VV011_DG_R2_paired.fq.gz VV011_DG_R2_unpaired.fq.gz \
+    HEADCROP:11 \
+    TRAILING:2 \
+    ILLUMINACLIP:/usr/local/apps/trimmomatic/Trimmomatic-0.36/adapters/TruSeq3-PE-2.fa:2:30:10 \
+    SLIDINGWINDOW:4:15 MINLEN:15
+java -Djava.io.tmpdir=. -jar $TRIMMOJAR PE -phred33 -threads $SLURM_CPUS_PER_TASK \
+    VV012_DG_R1_001.fastq.gz VV012_DG_R2_001.fastq.gz \
+    VV012_DG_R1_paired.fq.gz VV012_DG_R1_unpaired.fq.gz \
+    VV012_DG_R2_paired.fq.gz VV012_DG_R2_unpaired.fq.gz \
+    HEADCROP:11 \
+    TRAILING:2 \
+    ILLUMINACLIP:/usr/local/apps/trimmomatic/Trimmomatic-0.36/adapters/TruSeq3-PE-2.fa:2:30:10 \
+    SLIDINGWINDOW:4:15 MINLEN:15
+java -Djava.io.tmpdir=. -jar $TRIMMOJAR PE -phred33 -threads $SLURM_CPUS_PER_TASK \
+    VV013_DG_R1_001.fastq.gz VV013_DG_R2_001.fastq.gz \
+    VV013_DG_R1_paired.fq.gz VV013_DG_R1_unpaired.fq.gz \
+    VV013_DG_R2_paired.fq.gz VV013_DG_R2_unpaired.fq.gz \
+    HEADCROP:11 \
+    TRAILING:2 \
+    ILLUMINACLIP:/usr/local/apps/trimmomatic/Trimmomatic-0.36/adapters/TruSeq3-PE-2.fa:2:30:10 \
+    SLIDINGWINDOW:4:15 MINLEN:15
+java -Djava.io.tmpdir=. -jar $TRIMMOJAR PE -phred33 -threads $SLURM_CPUS_PER_TASK \
+    VV50_DG_R1_001.fastq.gz VV50_DG_R2_001.fastq.gz \
+    VV50_DG_R1_paired.fq.gz VV50_DG_R1_unpaired.fq.gz \
+    VV50_DG_R2_paired.fq.gz VV50_DG_R2_unpaired.fq.gz \
+    HEADCROP:11 \
+    TRAILING:2 \
+    ILLUMINACLIP:/usr/local/apps/trimmomatic/Trimmomatic-0.36/adapters/TruSeq3-PE-2.fa:2:30:10 \
+    SLIDINGWINDOW:4:15 MINLEN:15
+java -Djava.io.tmpdir=. -jar $TRIMMOJAR PE -phred33 -threads $SLURM_CPUS_PER_TASK \
+    VV55_DG_R1_001.fastq.gz VV55_DG_R2_001.fastq.gz \
+    VV55_DG_R1_paired.fq.gz VV55_DG_R1_unpaired.fq.gz \
+    VV55_DG_R2_paired.fq.gz VV55_DG_R2_unpaired.fq.gz \
+    HEADCROP:11 \
+    TRAILING:2 \
+    ILLUMINACLIP:/usr/local/apps/trimmomatic/Trimmomatic-0.36/adapters/TruSeq3-PE-2.fa:2:30:10 \
+    SLIDINGWINDOW:4:15 MINLEN:15
+java -Djava.io.tmpdir=. -jar $TRIMMOJAR PE -phred33 -threads $SLURM_CPUS_PER_TASK \
+    VV58_DG_R1_001.fastq.gz VV58_DG_R2_001.fastq.gz \
+    VV58_DG_R1_paired.fq.gz VV58_DG_R1_unpaired.fq.gz \
+    VV58_DG_R2_paired.fq.gz VV58_DG_R2_unpaired.fq.gz \
+    HEADCROP:11 \
+    TRAILING:2 \
+    ILLUMINACLIP:/usr/local/apps/trimmomatic/Trimmomatic-0.36/adapters/TruSeq3-PE-2.fa:2:30:10 \
+    SLIDINGWINDOW:4:15 MINLEN:15
+
+swarm -f cliptrim.swarm -g 20 -t 8 --module trimmomatic/0.36
+
+####################################
+# repeat fastqc fastq_screen reports
+####################################
+
+fastqc LL014_DG_R1_paired.fq.gz
+fastqc LL014_DG_R2_paired.fq.gz
+fastqc LL015_DG_R1_paired.fq.gz
+fastqc LL015_DG_R2_paired.fq.gz
+fastqc LL019_DG_R1_paired.fq.gz
+fastqc LL019_DG_R2_paired.fq.gz
+fastqc LL53_DG_R1_paired.fq.gz
+fastqc LL53_DG_R2_paired.fq.gz
+fastqc LL60_DG_R1_paired.fq.gz
+fastqc LL60_DG_R2_paired.fq.gz
+fastqc VLL51_DG_R1_paired.fq.gz
+fastqc VLL51_DG_R2_paired.fq.gz
+fastqc VV011_DG_R1_paired.fq.gz
+fastqc VV011_DG_R2_paired.fq.gz
+fastqc VV012_DG_R1_paired.fq.gz
+fastqc VV012_DG_R2_paired.fq.gz
+fastqc VV013_DG_R1_paired.fq.gz
+fastqc VV013_DG_R2_paired.fq.gz
+fastqc VV50_DG_R1_paired.fq.gz
+fastqc VV50_DG_R2_paired.fq.gz
+fastqc VV55_DG_R1_paired.fq.gz
+fastqc VV55_DG_R2_paired.fq.gz
+fastqc VV58_DG_R1_paired.fq.gz
+fastqc VV58_DG_R2_paired.fq.gz
+
+swarm -f repeatqc.swarm -g 10 --module fastqc
+
+##########################
+# generate multiqc reports
+##########################
+
+multiqc --title \'MultiQC_Results_For_DG\' /data/johnsonko/SideProject/Raj
+
+swarm -f multiqc.swarm -g 10 --module multiqc
+
+##############################
+# download feature annotations
+##############################
+
+wget http://hgdownload.soe.ucsc.edu/goldenPath/mm10/bigZips/genes/mm10.refGene.gtf.gz
+gunzip -d mm10.refGene.gtf.gz
+sinteractive
+module load python
+python extract_splice_sites.py mm10.refGene.gtf > splicesites.txt
+
+wget http://ftp.ensembl.org/pub/release-103/gtf/mus_musculus/Mus_musculus.GRCm39.103.gtf.gz
+gunzip -d Mus_musculus.GRCm39.103.gtf.gz
+sinteractive
+module load python
+python extract_splice_sites.pyMus_musculus.GRCm39.103.gtf > splicesites2.txt
+
+
+###########################
+# perform reference mapping
+# http://onetipperday.sterding.com/2012/07/how-to-tell-which-library-type-to-use.html
+# https://rnabio.org/module-09-appendix/0009/12/01/StrandSettings/
+###########################
+
+hisat2 -p $SLURM_CPUS_PER_TASK -q --phred33 --rna-strandness RF --dta --fr --no-discordant --no-mixed -x $HISAT_INDEXES/mm10/genome --known-splicesite-infile splicesites.txt -1 LL014_DG_R1_paired.fq.gz -2 LL014_DG_R2_paired.fq.gz -S LL014_DG.sam
+hisat2 -p $SLURM_CPUS_PER_TASK -q --phred33 --rna-strandness RF --dta --fr --no-discordant --no-mixed -x $HISAT_INDEXES/mm10/genome --known-splicesite-infile splicesites.txt -1 LL015_DG_R1_paired.fq.gz -2 LL015_DG_R2_paired.fq.gz -S LL015_DG.sam
+hisat2 -p $SLURM_CPUS_PER_TASK -q --phred33 --rna-strandness RF --dta --fr --no-discordant --no-mixed -x $HISAT_INDEXES/mm10/genome --known-splicesite-infile splicesites.txt -1 LL019_DG_R1_paired.fq.gz -2 LL019_DG_R2_paired.fq.gz -S LL019_DG.sam
+hisat2 -p $SLURM_CPUS_PER_TASK -q --phred33 --rna-strandness RF --dta --fr --no-discordant --no-mixed -x $HISAT_INDEXES/mm10/genome --known-splicesite-infile splicesites.txt -1 LL53_DG_R1_paired.fq.gz -2 LL53_DG_R2_paired.fq.gz -S LL53_DG.sam
+hisat2 -p $SLURM_CPUS_PER_TASK -q --phred33 --rna-strandness RF --dta --fr --no-discordant --no-mixed -x $HISAT_INDEXES/mm10/genome --known-splicesite-infile splicesites.txt -1 LL60_DG_R1_paired.fq.gz -2 LL60_DG_R2_paired.fq.gz -S LL60_DG.sam
+hisat2 -p $SLURM_CPUS_PER_TASK -q --phred33 --rna-strandness RF --dta --fr --no-discordant --no-mixed -x $HISAT_INDEXES/mm10/genome --known-splicesite-infile splicesites.txt -1 VLL51_DG_R1_paired.fq.gz -2 VLL51_DG_R2_paired.fq.gz -S VLL51_DG.sam
+hisat2 -p $SLURM_CPUS_PER_TASK -q --phred33 --rna-strandness RF --dta --fr --no-discordant --no-mixed -x $HISAT_INDEXES/mm10/genome --known-splicesite-infile splicesites.txt -1 VV011_DG_R1_paired.fq.gz -2 VV011_DG_R2_paired.fq.gz -S VV011_DG.sam
+hisat2 -p $SLURM_CPUS_PER_TASK -q --phred33 --rna-strandness RF --dta --fr --no-discordant --no-mixed -x $HISAT_INDEXES/mm10/genome --known-splicesite-infile splicesites.txt -1 VV012_DG_R1_paired.fq.gz -2 VV012_DG_R2_paired.fq.gz -S VV012_DG.sam
+hisat2 -p $SLURM_CPUS_PER_TASK -q --phred33 --rna-strandness RF --dta --fr --no-discordant --no-mixed -x $HISAT_INDEXES/mm10/genome --known-splicesite-infile splicesites.txt -1 VV013_DG_R1_paired.fq.gz -2 VV013_DG_R2_paired.fq.gz -S VV013_DG.sam
+hisat2 -p $SLURM_CPUS_PER_TASK -q --phred33 --rna-strandness RF --dta --fr --no-discordant --no-mixed -x $HISAT_INDEXES/mm10/genome --known-splicesite-infile splicesites.txt -1 VV50_DG_R1_paired.fq.gz -2 VV50_DG_R2_paired.fq.gz -S VV50_DG.sam
+hisat2 -p $SLURM_CPUS_PER_TASK -q --phred33 --rna-strandness RF --dta --fr --no-discordant --no-mixed -x $HISAT_INDEXES/mm10/genome --known-splicesite-infile splicesites.txt -1 VV55_DG_R1_paired.fq.gz -2 VV55_DG_R2_paired.fq.gz -S VV55_DG.sam
+hisat2 -p $SLURM_CPUS_PER_TASK -q --phred33 --rna-strandness RF --dta --fr --no-discordant --no-mixed -x $HISAT_INDEXES/mm10/genome --known-splicesite-infile splicesites.txt -1 VV58_DG_R1_paired.fq.gz -2 VV58_DG_R2_paired.fq.gz -S VV58_DG.sam
+
+swarm -f mapit.swarm -g 40 -t 8 --module hisat
+
+####################
+# convert sam to bam
+####################
+
+samtools view -Su -o LL014_DG.bam -@4 LL014_DG.sam
+samtools view -Su -o LL015_DG.bam -@4 LL015_DG.sam
+samtools view -Su -o LL019_DG.bam -@4 LL019_DG.sam
+samtools view -Su -o LL53_DG.bam -@4 LL53_DG.sam
+samtools view -Su -o LL60_DG.bam -@4 LL60_DG.sam
+samtools view -Su -o VLL51_DG.bam -@4 VLL51_DG.sam
+samtools view -Su -o VV011_DG.bam -@4 VV011_DG.sam
+samtools view -Su -o VV012_DG.bam -@4 VV012_DG.sam
+samtools view -Su -o VV013_DG.bam -@4 VV013_DG.sam
+samtools view -Su -o VV50_DG.bam -@4 VV50_DG.sam
+samtools view -Su -o VV55_DG.bam -@4 VV55_DG.sam
+samtools view -Su -o VV58_DG.bam -@4 VV58_DG.sam
+
+swarm -f samtobam.swarm -g 40 -t 8 --module samtools
+
+##########
+# sort bam
+##########
+
+samtools sort -T /lscratch/$SLURM_JOBID -o SORTED_LL014_DG.bam LL014_DG.bam
+samtools sort -T /lscratch/$SLURM_JOBID -o SORTED_LL015_DG.bam LL015_DG.bam
+samtools sort -T /lscratch/$SLURM_JOBID -o SORTED_LL019_DG.bam LL019_DG.bam
+samtools sort -T /lscratch/$SLURM_JOBID -o SORTED_LL53_DG.bam LL53_DG.bam
+samtools sort -T /lscratch/$SLURM_JOBID -o SORTED_LL60_DG.bam LL60_DG.bam
+samtools sort -T /lscratch/$SLURM_JOBID -o SORTED_VLL51_DG.bam VLL51_DG.bam
+samtools sort -T /lscratch/$SLURM_JOBID -o SORTED_VV011_DG.bam VV011_DG.bam
+samtools sort -T /lscratch/$SLURM_JOBID -o SORTED_VV012_DG.bam VV012_DG.bam
+samtools sort -T /lscratch/$SLURM_JOBID -o SORTED_VV013_DG.bam VV013_DG.bam
+samtools sort -T /lscratch/$SLURM_JOBID -o SORTED_VV50_DG.bam VV50_DG.bam
+samtools sort -T /lscratch/$SLURM_JOBID -o SORTED_VV55_DG.bam VV55_DG.bam
+samtools sort -T /lscratch/$SLURM_JOBID -o SORTED_VV58_DG.bam VV58_DG.bam
+
+swarm -f sortbam.swarm -g 40 -t 8 --module samtools --gres=lscratch:500
+
+###########
+# index bam
+###########
+
+samtools index SORTED_LL014_DG.bam
+samtools index SORTED_LL015_DG.bam
+samtools index SORTED_LL019_DG.bam
+samtools index SORTED_LL53_DG.bam
+samtools index SORTED_LL60_DG.bam
+samtools index SORTED_VLL51_DG.bam
+samtools index SORTED_VV011_DG.bam
+samtools index SORTED_VV012_DG.bam
+samtools index SORTED_VV013_DG.bam
+samtools index SORTED_VV50_DG.bam
+samtools index SORTED_VV55_DG.bam
+samtools index SORTED_VV58_DG.bam
+
+swarm -f indexbam.swarm -g 40 -t 8 --module samtools
+
+########
+# bam qc
+########
+
+bam_stat.py -i SORTED_LL014_DG.bam > SORTED_LL014_DG_bam_qc_stats.txt
+bam_stat.py -i SORTED_LL015_DG.bam > SORTED_LL015_DG_bam_qc_stats.txt
+bam_stat.py -i SORTED_LL019_DG.bam > SORTED_LL019_DG_bam_qc_stats.txt
+bam_stat.py -i SORTED_LL53_DG.bam > SORTED_LL53_DG_bam_qc_stats.txt
+bam_stat.py -i SORTED_LL60_DG.bam > SORTED_LL60_DG_bam_qc_stats.txt
+bam_stat.py -i SORTED_VLL51_DG.bam > SORTED_VLL51_DG_bam_qc_stats.txt
+bam_stat.py -i SORTED_VV011_DG.bam > SORTED_VV011_DG_bam_qc_stats.txt
+bam_stat.py -i SORTED_VV012_DG.bam > SORTED_VV012_DG_bam_qc_stats.txt
+bam_stat.py -i SORTED_VV013_DG.bam > SORTED_VV013_DG_bam_qc_stats.txt
+bam_stat.py -i SORTED_VV50_DG.bam > SORTED_VV50_DG_bam_qc_stats.txt
+bam_stat.py -i SORTED_VV55_DG.bam > SORTED_VV55_DG_bam_qc_stats.txt
+bam_stat.py -i SORTED_VV58_DG.bam > SORTED_VV58_DG_bam_qc_stats.txt
+
+swarm -f bamqc.swarm -g 40 -t 8 --module rseqc
+
+###################################################
+# perform coverage qc
+# https://sourceforge.net/projects/rseqc/files/BED/
+###################################################
+
+ls -1 | grep SORTED | grep bam > bamlist.txt
+
+geneBody_coverage.py -r mm10.HouseKeepingGenes.bed -i bamlist.txt  -o coverage
+
+swarm -f coverageqc.swarm -g 40 -t 8 --module rseqc
+
+#####################
+# transcript assembly
+#####################
+
+stringtie SORTED_LL014_DG.bam -p $SLURM_CPUS_PER_TASK -G mm10.refGene.gtf --rf -o SORTED_LL014_DG.gtf  
+stringtie SORTED_LL015_DG.bam -p $SLURM_CPUS_PER_TASK -G mm10.refGene.gtf --rf -o SORTED_LL015_DG.gtf  
+stringtie SORTED_LL019_DG.bam -p $SLURM_CPUS_PER_TASK -G mm10.refGene.gtf --rf -o SORTED_LL019_DG.gtf 
+stringtie SORTED_LL53_DG.bam -p $SLURM_CPUS_PER_TASK -G mm10.refGene.gtf --rf -o SORTED_LL53_DG.gtf 
+stringtie SORTED_LL60_DG.bam -p $SLURM_CPUS_PER_TASK -G mm10.refGene.gtf --rf -o SORTED_LL60_DG.gtf 
+stringtie SORTED_VLL51_DG.bam -p $SLURM_CPUS_PER_TASK -G mm10.refGene.gtf --rf -o SORTED_VLL51_DG.gtf 
+stringtie SORTED_VV011_DG.bam -p $SLURM_CPUS_PER_TASK -G mm10.refGene.gtf --rf -o SORTED_VV011_DG.gtf 
+stringtie SORTED_VV012_DG.bam -p $SLURM_CPUS_PER_TASK -G mm10.refGene.gtf --rf -o SORTED_VV012_DG.gtf  
+stringtie SORTED_VV013_DG.bam -p $SLURM_CPUS_PER_TASK -G mm10.refGene.gtf --rf -o SORTED_VV013_DG.gtf 
+stringtie SORTED_VV50_DG.bam -p $SLURM_CPUS_PER_TASK -G mm10.refGene.gtf --rf -o SORTED_VV50_DG.gtf 
+stringtie SORTED_VV55_DG.bam -p $SLURM_CPUS_PER_TASK -G mm10.refGene.gtf --rf -o SORTED_VV55_DG.gtf 
+stringtie SORTED_VV58_DG.bam -p $SLURM_CPUS_PER_TASK -G mm10.refGene.gtf --rf -o SORTED_VV58_DG.gtf 
+
+swarm -f isoformdiscovery.swarm -g 40 -t 8 --module stringtie
+
+################
+# assembly merge
+################
+
+ls -1 | grep SORTED | grep gtf > mergelist.txt
+
+stringtie --merge -p 8 -G mm10.refGene.gtf -o stringtie_merged.gtf mergelist.txt
+
+swarm -f isoformmerge.swarm -g 40 -t 8 --module stringtie
+
+#########################################
+# compared merged assembly with reference
+#########################################
+
+gffcompare –r mm10.refGene.gtf –G –o merged stringtie_merged.gtf
+
+swarm -f assemblecompare.swarm -g 40 -t 8 --module gffcompare
+
+################################
+# perform transcript enumeration
+################################
+
+mkdir Ballgown_SORTED_LL014_DG
+mkdir Ballgown_SORTED_LL015_DG
+mkdir Ballgown_SORTED_LL019_DG
+mkdir Ballgown_SORTED_LL53_DG
+mkdir Ballgown_SORTED_LL60_DG
+mkdir Ballgown_SORTED_VLL51_DG
+mkdir Ballgown_SORTED_VV011_DG
+mkdir Ballgown_SORTED_VV012_DG
+mkdir Ballgown_SORTED_VV013_DG
+mkdir Ballgown_SORTED_VV50_DG
+mkdir Ballgown_SORTED_VV55_DG
+mkdir Ballgown_SORTED_VV58_DG
+
+stringtie --rf –eB -A GeneExpressionFor_LL014_DG -p $SLURM_CPUS_PER_TASK -G stringtie_merged.gtf -o /data/johnsonko/SideProject/Raj/Ballgown_SORTED_LL014_DG/FINAL_SORTED_LL014_DG.gtf SORTED_LL014_DG.bam
+stringtie --rf –eB -A GeneExpressionFor_LL015_DG -p $SLURM_CPUS_PER_TASK -G stringtie_merged.gtf -o /data/johnsonko/SideProject/Raj/Ballgown_SORTED_LL015_DG/FINAL_SORTED_LL015_DG.gtf SORTED_LL015_DG.bam
+stringtie --rf –eB -A GeneExpressionFor_LL019_DG -p $SLURM_CPUS_PER_TASK -G stringtie_merged.gtf -o /data/johnsonko/SideProject/Raj/Ballgown_SORTED_LL019_DG/FINAL_SORTED_LL019_DG.gtf SORTED_LL019_DG.bam
+stringtie --rf –eB -A GeneExpressionFor_LL53_DG -p $SLURM_CPUS_PER_TASK -G stringtie_merged.gtf -o /data/johnsonko/SideProject/Raj/Ballgown_SORTED_LL53_DG/FINAL_SORTED_LL53_DG.gtf SORTED_LL53_DG.bam
+stringtie --rf –eB -A GeneExpressionFor_LL60_DG -p $SLURM_CPUS_PER_TASK -G stringtie_merged.gtf -o /data/johnsonko/SideProject/Raj/Ballgown_SORTED_LL60_DG/FINAL_SORTED_LL60_DG.gtf SORTED_LL60_DG.bam
+stringtie --rf –eB -A GeneExpressionFor_VLL51_DG -p $SLURM_CPUS_PER_TASK -G stringtie_merged.gtf -o /data/johnsonko/SideProject/Raj/Ballgown_SORTED_VLL51_DG/FINAL_SORTED_VLL51_DG.gtf SORTED_VLL51_DG.bam
+stringtie --rf –eB -A GeneExpressionFor_VV011_DG -p $SLURM_CPUS_PER_TASK -G stringtie_merged.gtf -o /data/johnsonko/SideProject/Raj/Ballgown_SORTED_VV011_DG/FINAL_SORTED_VV011_DG.gtf SORTED_VV011_DG.bam
+stringtie --rf –eB -A GeneExpressionFor_VV012_DG -p $SLURM_CPUS_PER_TASK -G stringtie_merged.gtf -o /data/johnsonko/SideProject/Raj/Ballgown_SORTED_VV012_DG/FINAL_SORTED_VV012_DG.gtf SORTED_VV012_DG.bam
+stringtie --rf –eB -A GeneExpressionFor_VV013_DG -p $SLURM_CPUS_PER_TASK -G stringtie_merged.gtf -o /data/johnsonko/SideProject/Raj/Ballgown_SORTED_VV013_DG/FINAL_SORTED_VV013_DG.gtf SORTED_VV013_DG.bam
+stringtie --rf –eB -A GeneExpressionFor_VV50_DG -p $SLURM_CPUS_PER_TASK -G stringtie_merged.gtf -o /data/johnsonko/SideProject/Raj/Ballgown_SORTED_VV50_DG/FINAL_SORTED_VV50_DG.gtf SORTED_VV50_DG.bam
+stringtie --rf –eB -A GeneExpressionFor_VV55_DG -p $SLURM_CPUS_PER_TASK -G stringtie_merged.gtf -o /data/johnsonko/SideProject/Raj/Ballgown_SORTED_VV55_DG/FINAL_SORTED_VV55_DG.gtf SORTED_VV55_DG.bam
+stringtie --rf –eB -A GeneExpressionFor_VV58_DG -p $SLURM_CPUS_PER_TASK -G stringtie_merged.gtf -o /data/johnsonko/SideProject/Raj/Ballgown_SORTED_VV58_DG/FINAL_SORTED_VV58_DG.gtf SORTED_VV58_DG.bam
+
+swarm -f enumerate.swarm -g 40 -t 8 --module stringtie
+
+##########################
+# perform gene enumeration
+# https://bioconductor.org/packages/devel/bioc/vignettes/IsoformSwitchAnalyzeR/inst/doc/IsoformSwitchAnalyzeR.html#testing-for-isoform-switches-via-dexseq
+##########################
+
+wget https://bioconductor.org/packages/devel/bioc/src/contrib/IsoformSwitchAnalyzeR_1.13.05.tar.gz
+
+sinteractive --mem 500g --time 36:00:00 --gres=lscratch:500
+module load R/4.0.3 Rstudio
+rstudio &
+
+packageVersion('IsoformSwitchAnalyzeR')
+library(IsoformSwitchAnalyzeR)
+
+stringtieQuant <- importIsoformExpression("/data/johnsonko/SideProject/Raj/ballgown/",readLength=75)
+
+myDesign <- data.frame(
+    sampleID = colnames(stringtieQuant$abundance)[-1],
+    condition = as.factor(c("MUT","MUT","MUT","MUT","MUT","MUT","WT","WT","WT","WT","WT","WT"))
+)
+myDesign
+
+aSwitchList <- importRdata(
+    isoformCountMatrix   = stringtieQuant$counts,
+    isoformRepExpression = stringtieQuant$abundance,
+    designMatrix         = myDesign,
+    isoformExonAnnoation = "/data/johnsonko/SideProject/Raj/stringtie_merged.gtf",
+    fixStringTieAnnotationProblem = TRUE,  
+    showProgress = FALSE
+)
+summary(aSwitchList)
+
+geneCountMatrix <- extractGeneExpression(
+    aSwitchList,
+    extractCounts = TRUE # set to FALSE for abundances
+)
+write.table(geneCountMatrix,"geneCountMatrix.txt",sep="\t")
+
+transcriptCountMatrix <- aSwitchList$isoformCountMatrix
+write.table(transcriptCountMatrix,"transcriptCountMatrix.txt",sep="\t")
+
+##########################
+# Other
+##########################
+
+library(BSgenome)
+getBSgenome("BSgenome.Mmusculus.UCSC.mm10", masked=FALSE)
+
+aSwitchList <- isoformSwitchAnalysisPart1(
+    switchAnalyzeRlist   = aSwitchList,
+    pathToOutput = "/data/johnsonko/SideProject/Raj/",
+    outputSequences = TRUE,
+    prepareForWebServers = TRUE,
+    genomeObject = BSgenome.Mmusculus.UCSC.mm10,
+    pathToGTF = "/data/johnsonko/SideProject/Raj/stringtie_merged.gtf"
+)
